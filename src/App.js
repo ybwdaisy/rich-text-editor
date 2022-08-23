@@ -1,7 +1,13 @@
-import SlateApp from './examples/slate';
+import SlateEditor from './examples/slate';
+import QuillEditor from './examples/quill';
 
 const App = () => {
-  return <SlateApp />;
+  return (
+    <>
+      <SlateEditor />
+      <QuillEditor />
+    </>
+  );
 }
 
 export default App;
