@@ -110,7 +110,6 @@ const SlateApp = () => {
   }, [editor])
 
   const onChange = useCallback((value) => {
-    console.log('onChange', value)
     const isAstChange = editor.operations.some(
       op => 'set_selection' !== op.type
     )
@@ -126,7 +125,7 @@ const SlateApp = () => {
       value={initialValue}
       onChange={onChange}
     >
-      <div>
+      <div className="slate">
         <button
           onMouseDown={event => {
             event.preventDefault()
@@ -143,12 +142,12 @@ const SlateApp = () => {
         >
           Code Block
         </button>
+        <Editable
+          renderElement={renderElement}
+          renderLeaf={renderLeaf}
+          onKeyDown={onKeyDown}
+        />
       </div>
-      <Editable
-        renderElement={renderElement}
-        renderLeaf={renderLeaf}
-        onKeyDown={onKeyDown}
-      />
     </Slate>
   )
 };
