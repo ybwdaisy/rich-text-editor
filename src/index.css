@@ -2,8 +2,12 @@
 @import "/node_modules/react-quill/dist/quill.snow.css";
 @import "/node_modules/react-quill/dist/quill.bubble.css";
 
-body {
+html, body, div, p {
+  padding: 0;
   margin: 0;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -36,4 +40,10 @@ pre, code {
 .ql-bubble .ql-editor {
   border: 1px solid #ccc;
   border-radius: 0.5em;
+}
+
+.slate, .draft {
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  padding: 10px;
 }
